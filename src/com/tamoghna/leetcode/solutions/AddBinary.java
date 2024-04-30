@@ -9,7 +9,7 @@ public class AddBinary {
         int carry = 0;
         while(i >= 0 || j >= 0){
             int sum = carry;
-            if(i >= 0) sum += a.charAt(i--) - '0';
+            if(i >= 0) sum += a.charAt(i--) - '0';  // ascii of '0' = 48 
             if(j >= 0) sum += b.charAt(j--) - '0';
             carry = sum > 1 ? 1 : 0;
             res.append(sum % 2);
