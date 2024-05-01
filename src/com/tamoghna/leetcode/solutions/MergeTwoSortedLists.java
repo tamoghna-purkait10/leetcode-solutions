@@ -1,22 +1,5 @@
 package com.tamoghna.leetcode.solutions;
 
-class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode() {
-	}
-
-	ListNode(int val) {
-		this.val = val;
-	}
-
-	ListNode(int val, ListNode next) {
-		this.val = val;
-		this.next = next;
-	}
-}
-
 public class MergeTwoSortedLists {
 
 	private static ListNode mergeTwoSortedLists(ListNode list1, ListNode list2) {
@@ -55,7 +38,7 @@ public class MergeTwoSortedLists {
 
 		ListNode mergedNode = mergeTwoSortedLists(list1, list2);
 
-		while (mergedNode.next != null) {
+		while (mergedNode != null) {
 			System.out.println(mergedNode.val);
 			mergedNode = mergedNode.next;
 		}
