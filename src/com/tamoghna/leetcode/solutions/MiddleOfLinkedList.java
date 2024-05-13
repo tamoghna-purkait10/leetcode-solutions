@@ -21,6 +21,7 @@ public class MiddleOfLinkedList {
     }
 	
 	//Optimized with one pass only but takes more memory
+	@SuppressWarnings("unused")
 	private static ListNode middleNode1(ListNode head) {
         
         ListNode fast = head, slow = head;
