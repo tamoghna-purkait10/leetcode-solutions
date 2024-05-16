@@ -3,7 +3,7 @@ package com.tamoghna.leetcode.solutions;
 public class InsertGCDLinkedList {
 
 	
-	// TC O(n) and SC O(n) - 38 Ms runtime.
+	// TC O(n) and SC O(n) - 1 Ms runtime.
 	private static ListNode insertGreatestCommonDivisors(ListNode head) {
         ListNode curr = head;
         ListNode gcdNode = null;
@@ -19,15 +19,12 @@ public class InsertGCDLinkedList {
     }
 
     private static int findGcd(int a, int b){
-        int max = a > b ? a : b;
-
-        for(int i=max; i>0; i--){
-            if(a%i == 0 && b%i == 0){
-                return i;
-            }
+    	while(a != 0) {
+            int res = a;
+            a = b%a;
+            b = res;
         }
-        
-        return 1;
+        return b;
     }
     
 	public static void main(String[] args) {
