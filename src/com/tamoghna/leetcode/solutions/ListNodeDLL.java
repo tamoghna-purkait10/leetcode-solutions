@@ -5,15 +5,17 @@ public class ListNodeDLL {
 	Object val;
 	ListNodeDLL next;
 	ListNodeDLL prev;
+	
+	
 
-	ListNodeDLL() {
+	public ListNodeDLL() {
 	}
 
-	ListNodeDLL(Object val) {
+	public ListNodeDLL(Object val) {
 		this.val = val;
 	}
 
-	ListNodeDLL(Object val, ListNodeDLL next, ListNodeDLL prev) {
+	public ListNodeDLL(Object val, ListNodeDLL next, ListNodeDLL prev) {
 		this.val = val;
 		this.next = next;
 		this.prev = prev;
